@@ -53,7 +53,7 @@ class TestAllMethods(unittest.TestCase):
             self.soup), 'https://en.wikipedia.org/wiki/List_of_American_universities_with_Olympic_medals')
 
     def test_admissions_info(self):
-        self.assertEqual(getAdmissionsInfo2019(self.soup), {'Literature, Science, and the Arts': '1841',
+        self.assertEqual(getAdmissionsInfo2019(self.soup), {'Literature, Science, andthe Arts': '1841',
                                                             'Medicine': '1850',
                                                             'Engineering': '1854',
                                                             'Law': '1859',
