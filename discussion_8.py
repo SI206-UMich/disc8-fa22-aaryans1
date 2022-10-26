@@ -18,7 +18,14 @@ def getLink(soup):
 
 
 def getAdmissionsInfo2019(soup):
-
+    school_funding_list = soup.find('table', class_='toccolours')
+    tr_list = school_funding_list.find_all('tr')
+    admission_info = {}
+    for tr in tr_list[1:]:
+        td = tr.find_all('td')
+        #if(td[1].text.strip() != "Year founded"):
+        admission_info[td[0].text.strip()] = td[1].text.strip()
+    return admission_info
     
             
 
